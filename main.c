@@ -6,15 +6,16 @@
 
 
 int Greeting();
-int MenuForCreating();
+void Menu();
 
 
 int main()
 {
+	
 	setlocale(LC_ALL, "Russian");
 	Greeting();
-	MenuForCreating();
-	system("pause");
+	Menu();
+	system("pause"); // Need to del in last commit
 	return 0;
 }
 
@@ -32,18 +33,25 @@ int Greeting()
 	return 0;
 }
 
-int MenuForCreating()
+void Menu()
 {
 	char Button[3];
+	printf("\n\n");
 	while (1)
 	{
+		printf("____________________________\n");
 		printf("Что бы вы хотели сделать?\n");
+		printf("L - просмотр текущих заметок\n");
 		printf("C - создать ");
 		printf("E - редактировать \n");
 		printf("D - удалить ");
 		printf("A - добавить ");
 		printf("ESC - выйти \n");
 		scanf("%s", Button);
+		if(!strcmp("L", Button))
+		{
+			//
+		}
 		if(!strcmp("C", Button))
 		{
 			//
@@ -60,16 +68,17 @@ int MenuForCreating()
 		{
 			//
 		}
-		if(!strcmp("ESC", Button))
+		if((!strcmp("ESC", Button)) || (!strcmp("Esc", Button)) || (!strcmp("esc", Button)))
 		{
 			break;
+			system("cls");
 		}		
 		else //условие ошибки 
 		{
 			//
 		}
+		system("cls");	
 	}	
-	return 0;
 }
 
 
