@@ -47,7 +47,31 @@ void Menu()
 	printf(" _____________________________\n\n\n");
 	printf("'Help' - команда для вывода меню\n\n");
 	scanf("%s", Helper);
-	if(!strcmp("L", Helper))
+	if((!strcmp("help", Helper)) || (!strcmp("helP", Helper)) || (!strcmp("heLp", Helper)) 
+	|| (!strcmp("heLP", Helper)) || (!strcmp("hElp", Helper)) || (!strcmp("hElP", Helper))
+	|| (!strcmp("hELp", Helper)) || (!strcmp("hElP", Helper)) || (!strcmp("Help", Helper))
+	|| (!strcmp("HelP", Helper)) || (!strcmp("HeLp", Helper)) || (!strcmp("HeLP", Helper)) 		
+	|| (!strcmp("HElp", Helper)) || (!strcmp("HElP", Helper)) || (!strcmp("HELp", Helper))			 		
+    || (!strcmp("HELP", Helper)))
+	{
+		printf("\nЭта программа предназначена для хранения ваших заметок,\n"); 
+        printf("действия над которыми Вы будете совершать в процессе.\n");
+		printf("Примеры заметки для этой программы:\n");
+		printf("_________________________________________________________\n");
+		printf("Дата(при желании), Заметка/Действие  , Приоритет:\n");
+		printf("08.08.2018       , Встреча с друзьями, Высокий приоритет.\n");
+		printf("_________________________________________________________\n\n\n");
+/*		printf("Press any key to continue\n");
+		while(!kbhit (0))
+		{
+			system("clear");
+			system("clear");
+			Menu();
+		}*/
+	}
+	else 
+    {
+    if(!strcmp("L", Helper))
 	{
 		//
 	}
@@ -77,15 +101,8 @@ void Menu()
 		system("clear");
 		Menu();
 	}
-	if((!strcmp("help", Helper)) || (!strcmp("helP", Helper)) || (!strcmp("heLp", Helper)) 
-	|| (!strcmp("heLP", Helper)) || (!strcmp("hElp", Helper)) || (!strcmp("hElP", Helper))
-	|| (!strcmp("hELp", Helper)) || (!strcmp("hElP", Helper)) || (!strcmp("Help", Helper))
-	|| (!strcmp("HelP", Helper)) || (!strcmp("HeLp", Helper)) || (!strcmp("HeLP", Helper)) 		
-	|| (!strcmp("HElp", Helper)) || (!strcmp("HElP", Helper)) || (!strcmp("HELp", Helper))			 		|| (!strcmp("HELP", Helper))) // Help
-	{
-		//Description about programm	
-	}
-	system("clear");	
+    }
+//	system("clear");	
 }
 
 
