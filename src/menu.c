@@ -27,8 +27,8 @@ void Menu(void){
 		printf("\nThis programm using for keeping the notes,\n"); 
 		printf("Example:\n");
 		printf("_________________________________________________________\n");
-		printf("Note,     Priority::\n");
-		printf("Going out with friends,     2.\n");
+		printf("Note.                       Priority:\n");
+		printf("Going out with friends.     2.\n");
 		printf("_________________________________________________________\n\n\n");
 		printf("Press any key to continue\n");
 		
