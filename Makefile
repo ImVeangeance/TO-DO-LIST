@@ -1,7 +1,7 @@
 main: bin/main
 
-bin/main: build/main.o build/create_or_add.o build/menu.o build/print_view.o build/copy.o build/delete.o build/edit.o
-	gcc -Wall -Werror build/main.o build/create_or_add.o build/menu.o build/print_view.o build/copy.o build/delete.o build/edit.o -o bin/main -lncurses
+bin/main: build/main.o build/create_or_add.o build/menu.o build/print_view.o build/copy.o build/delete.o 
+	gcc -Wall -Werror build/main.o build/create_or_add.o build/menu.o build/print_view.o build/copy.o build/delete.o -o bin/main -lncurses
 
 build/main.o: src/main.c
 	gcc -std=c99 -I includes -Wall -lncurses -ltinfo -Werror -c src/main.c -o build/main.o
@@ -20,9 +20,6 @@ build/copy.o: src/copy.c
 
 build/delete.o: src/delete.c
 	gcc -std=c99 -Wall -Werror -c src/delete.c -o build/delete.o
-
-build/edit.o: src/edit.c
-	gcc -std=c99 -Wall -Werror -c src/edit.c -o build/edit.o
 
 .PHONY : clean
 clean:
