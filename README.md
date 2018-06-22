@@ -9,11 +9,15 @@ OS: Linux
 ```
   $ git clone https://github.com/PlsDeleteMyLife/TO-DO-LIST
 ```
-2. Установите библиотеку ncourses.h командой:
+2. Перейдите в папку с приложением командой:
+```
+  cd TO-DO-LIST 
+  ```
+3. Установите библиотеку ncourses.h командой:
 ```
   sudo apt-get install libncurses5 libncurses5-dev 
   ```
-3. Далее запустите сборку и запустите приложение:
+4. Далее запустите сборку и запустите приложение:
 ```
   $ make
   $ bin/main

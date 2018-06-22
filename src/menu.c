@@ -15,7 +15,6 @@ void Menu(void){
 	printf("|C - Create new list        |\n");
 	printf("|A - Add in existing list   |\n");
 	printf("|D - Delete note            |\n");
-	printf("|E - Edit note              |\n");
 	printf("|ESC - Escape               |\n");
 	printf(" ___________________________\n\n\n");
 	printf("'help' - about notes struct\n\n");
@@ -27,8 +26,8 @@ void Menu(void){
 		printf("\nThis programm using for keeping the notes,\n"); 
 		printf("Example:\n");
 		printf("_________________________________________________________\n");
-		printf("Note,     Priority::\n");
-		printf("Going out with friends,     2.\n");
+		printf("Note:                       Priority:\n");
+		printf("Going out with friends.     2.\n");
 		printf("_________________________________________________________\n\n\n");
 		printf("Press any key to continue\n");
 		
@@ -47,14 +46,11 @@ void Menu(void){
 		else{
 		
             switch(Helper[0]){
-				case 'V':
+			    case 'V':
 				    View(database);
-					break;
-	    	    case 'C':
-				    CreateOrAdd(database, Helper[0]);
 				    break;
-			    case 'E':
-				    Edit(database, buffile);
+	    	    	    case 'C':
+				    CreateOrAdd(database, Helper[0]);
 				    break;
 			    case 'D':
 				    Delete(database, buffile);
