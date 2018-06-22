@@ -38,7 +38,12 @@ int Print(FILE *database){
 	return i - 1;
 }
 
-
+void View(FILE * database){
+	
+	Print(database);
+	getch();
+	
+}
 
 
 
