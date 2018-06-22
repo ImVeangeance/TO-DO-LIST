@@ -27,21 +27,21 @@ void Menu(void){
 		printf("\nThis programm using for keeping the notes,\n"); 
 		printf("Example:\n");
 		printf("_________________________________________________________\n");
-		printf("Note.                       Priority:\n");
-		printf("Going out with friends.     2.\n");
+		printf("Note,     Priority::\n");
+		printf("Going out with friends,     2.\n");
 		printf("_________________________________________________________\n\n\n");
 		printf("Press any key to continue\n");
 		
 		getch();
 		
-		system("CLS");
+		system("clear");
 		Menu();
    
     }
     else{
 
 		if(!strcmp("ESC", Helper)){
-			system("CLS");
+			system("clear");
 		    exit(0);               
 	    }
 		else{
@@ -63,14 +63,13 @@ void Menu(void){
 				    CreateOrAdd(database, Helper[0]);
 				    break;
 			    default: 
-				    system("CLS");
+				    system("clear");
 				    printf("Wrong key, input again\n\n");
 		            Menu();
 		    }		
 		}	
 	}
 	
-	system("CLS");
     Menu();
 
 }

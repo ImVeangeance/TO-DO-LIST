@@ -26,45 +26,38 @@ void CreateOrAdd(FILE * database, char state){
 	else
 		database = fopen("database.txt","ab"); 
 	
-	system("CLS");	
+	system("clear");	
     printf("New note:\n\n\n");
-    
-	char ch = 0;
-	while(ch != 'y'){
 		
 		Note* note = InitNote();
 
 		printf("Input the note:\n");
 		scanf("%142s", note->memo);
 
-		printf("Input a priority from 3 (important) to 1 (inconsiderable)\n");
-		
-		unsigned char pr = getch();
+		int pr;
 		while(1){
-			
-			if((pr - '0') >= 1 && (pr - '0') <= 3){
-				note->priority = (pr - '0');
+			printf("Input a priority from 3 (important) to 1 (inconsiderable)\n");
+			scanf("%d", &pr);
+			if((pr) >= 1 && (pr) <= 3){
+				note->priority = pr;
 			    break;
-			}	
-			printf("Wrong priority, input again\n");
-			pr = getch();
+			}
+			else	
+				printf("Wrong priority, input again\n");
+			
 		}
 	    
 	    printf("%s\n", note->memo);
 	    printf("%d\n", note->priority);
 	    
 	    fwrite(note, sizeof(Note), 1, database);   
+		getch();
+	        free(note);
+		system("clear");
 
-	    printf("Finish?  y/n  ");
-	    printf("\n");
-
-		ch = getch();
-	    free(note);
-		system("CLS");
-	}
-	
 	fclose(database);	
 }
+
 
 
 
