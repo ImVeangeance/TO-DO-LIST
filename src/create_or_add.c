@@ -31,7 +31,7 @@ void CreateOrAdd(FILE * database, char state){
 		
 		Note* note = InitNote();
 
-		printf("Input the note:\n");
+		printf("Input the note: (When you enter a note with more than one word, use '_' to separate the words.)\n");
 		scanf("%142s", note->memo);
 
 		int pr;

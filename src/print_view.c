@@ -16,7 +16,7 @@ int Print(FILE *database){
 	
 	while (!feof(database)){
 		
-		printf("№%i.\nNote -%s\nPriority -%i\n\n", i, note->memo, note->priority);
+		printf("№%i.\nNote - %s\nPriority - %i\n\n", i, note->memo, note->priority);
 	    fread(note, sizeof(Note), 1, database);
 	    i++;
 	    
