@@ -15,7 +15,6 @@ build/menu.o: src/menu.c
 build/print_view.o: src/print_view.c
 	gcc -std=c99 -Wall -Werror -c src/print_view.c -o build/print_view.o
 
-
 .PHONY : clean
 clean:
 	rm -rf build/*.o
