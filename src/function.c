@@ -110,6 +110,30 @@ void Copy(FILE *database, FILE *buffile){
     fclose(buffile);
 }
 
+void Edit(FILE *database, FILE *buffile){  
+
+	database = fopen("database.txt","rb");
+	buffile = fopen("buffile.txt","wb");
+	system("CLS");
+	
+	int num_edit;                   
+	int num = Print(database);     
+	
+	if(num == 0)
+		return;
+	
+	printf("Input the number of note for deleting\n");
+	scanf("%d", &num_edit);	
+	while(1){
+	    
+		if(num_edit > 0 && num_edit <= num)
+			break;
+		printf("Wrong number, input again\n");
+		scanf("%d", &num_edit);
+	}
+	////
+}
+
 void Delete(FILE *database, FILE *buffile){
 	
 	database = fopen("database.txt","rb");
