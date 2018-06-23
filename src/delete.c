@@ -11,7 +11,7 @@ void Delete(int delka){
 	
 	database = fopen("database.txt","rb");
 	buffile = fopen("buffile.txt","wb");
-	system("CLS");
+	system("clear");
 	
 	int num_del;                   
 	int num = Print(database);     
