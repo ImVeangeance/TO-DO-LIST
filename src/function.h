@@ -5,6 +5,8 @@
 #ifndef function_h_
 #define function_h_
 #include <stdio.h>
+FILE *database;
+FILE *buffile;
 
 typedef struct Note{
 	
@@ -13,8 +15,8 @@ typedef struct Note{
 		
 }Note;
 
-FILE *buffile;
-FILE *database;
+//FILE *buffile;
+//FILE *database;
 
 Note* InitNote(void);
 int Print(FILE *database);
@@ -22,7 +24,7 @@ void View(FILE * database);
 void CreateOrAdd(FILE *database, char state);
 void Copy(FILE *database, FILE *buffile);
 void Edit(FILE *database, FILE *buffile);
-void Delete(FILE *database, FILE *buffile, int delka);
+void Delete(int delka);
 void Menu(void);
 
 #endif

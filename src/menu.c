@@ -4,6 +4,8 @@
 #include <locale.h>
 #include <ncurses.h>
 #include "function.h"
+FILE *database; 
+FILE *buffile;
 
 void Menu(void){
 
@@ -56,7 +58,7 @@ void Menu(void){
 		Print(database);
 		printf("You want to delete note what number is? -");
 		scanf("%d",&delka);
-		Delete(database, buffile, delka);
+		Delete(delka);
 		break;
 	case 'A':
 		CreateOrAdd(database, Helper[0]);

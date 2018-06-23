@@ -4,23 +4,57 @@
 #include "function.h"
 #include <stdbool.h>
 
-CTEST(CopyTest, Check)
+FILE *database; 
+FILE *buffile;
+
+
+CTEST(Del,ForOneNoteDatabase)
 {
-	FILE * klgn;
-	bool result = Copy(database, klgn);
-	ASSERT_FALSE(result);
+	int a=1;
+	Delete(a);
+	if (buffile==NULL)
+	{
+		ASSERT_TRUE(1);
+	}
 }
 
-CTEST(DeleteTest, Check)
+CTEST(Del,ForOneNoteBuffile)
 {
-	int delka=0;
-	bool result = Delete(database, buffile, delka);
-	ASSERT_FALSE(result);
+	int a=1;
+	Delete(a);
+	if (database==NULL)
+	{
+		ASSERT_TRUE(1);
+	}
+}
+//
+CTEST(Del,ForOneNoteDatabaseBad)
+{
+	bool b=1;
+	int a=1;
+	Delete(a);
+	if (database==NULL)
+	{
+		ASSERT_FALSE(b);
+	}
+	else
+		ASSERT_TRUE(b);
 }
 
-CTEST(DeleteTest, Syntax_Check)
+CTEST(Del,ForOneNoteBuffileBad)
 {
-	char delka='e';
-	bool result = Delete(database, buffile, delka);
-	ASSERT_FALSE(result);
+	bool b=1;
+	int a=1;
+	Delete(a);
+	if (buffile==NULL)
+	{
+		ASSERT_FALSE(b);
+	}
+	else
+		ASSERT_TRUE(b);
+}
+
+int main(int argc, const char** argv)
+{
+    return ctest_main(argc, argv);
 }

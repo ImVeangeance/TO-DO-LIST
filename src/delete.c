@@ -4,8 +4,10 @@
 #include <locale.h>
 #include <ncurses.h>
 #include "function.h"
+FILE *database;
+FILE *buffile;
 
-void Delete(FILE *database, FILE *buffile, int delka){
+void Delete(int delka){
 	
 	database = fopen("database.txt","rb");
 	buffile = fopen("buffile.txt","wb");
