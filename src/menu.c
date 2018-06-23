@@ -10,13 +10,13 @@ void Menu(void){
 	printf("\n");
 	char Helper[4];
 	int delka;
-	printf(" ___________________________\n");
-	printf("|V - View |\n");
-	printf("|C - Create new list |\n");
+	printf(" _________________________\n");
+	printf("|V - View                 |\n");
+	printf("|C - Create new list      |\n");
 	printf("|A - Add in existing list |\n");
-	printf("|D - Delete note |\n");
-	printf("|ESC - Escape |\n");
-	printf(" ___________________________\n\n\n");
+	printf("|D - Delete note          |\n");
+	printf("|ESC - Escape             |\n");
+	printf(" _________________________\n\n\n");
 	printf("'help' - about notes struct\n\n");
 
 	scanf("%s", Helper);

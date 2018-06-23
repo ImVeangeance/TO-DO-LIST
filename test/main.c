@@ -4,6 +4,13 @@
 #include "function.h"
 #include <stdbool.h>
 
+CTEST(CopyTest, Check)
+{
+	FILE * klgn;
+	bool result = Copy(database, klgn);
+	ASSERT_FALSE(result);
+}
+
 CTEST(DeleteTest, Check)
 {
 	int delka=0;
