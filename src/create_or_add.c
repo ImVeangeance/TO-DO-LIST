@@ -27,12 +27,13 @@ void CreateOrAdd(FILE * database, char state){
 		database = fopen("database.txt","ab"); 
 	
 	system("clear");	
-    printf("New note:\n\n\n");
+    printf("New note:\n");
 		
 		Note* note = InitNote();
 
-		printf("Input the note:\n");
-		scanf("%142s", note->memo);
+		printf("[144 symbols only]\n Input the note:\n");
+		fgets(note->memo, 144, stdin);
+		fgets(note->memo, 144, stdin);
 
 		int pr;
 		while(1){

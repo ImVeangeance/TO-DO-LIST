@@ -5,7 +5,7 @@
 #include <ncurses.h>
 #include "function.h"
 
-void Delete(FILE *database, FILE *buffile){
+void Delete(FILE *database, FILE *buffile, int delka){
 	
 	database = fopen("database.txt","rb");
 	buffile = fopen("buffile.txt","wb");
@@ -16,6 +16,8 @@ void Delete(FILE *database, FILE *buffile){
 	
 	if(num == 0)
 		return;
+
+	num_del=delka;
 	
 	printf("Input the number of note for deleting\n");
 	scanf("%d", &num_del);

@@ -22,7 +22,7 @@ void View(FILE * database);
 void CreateOrAdd(FILE *database, char state);
 void Copy(FILE *database, FILE *buffile);
 void Edit(FILE *database, FILE *buffile);
-void Delete(FILE *database, FILE *buffile);
+void Delete(FILE *database, FILE *buffile, int delka);
 void Menu(void);
 
 #endif
