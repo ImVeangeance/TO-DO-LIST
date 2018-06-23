@@ -34,7 +34,6 @@ void CreateOrAdd(FILE * database, char state){
 		printf("[144 symbols only]\n Input the note:\n");
 		fgets(note->memo, 144, stdin);
 		fgets(note->memo, 144, stdin);
-
 		int pr;
 		while(1){
 			printf("Input a priority from 3 (important) to 1 (inconsiderable)\n");

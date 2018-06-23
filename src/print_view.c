@@ -7,7 +7,6 @@
 
 int Print(FILE *database){
 	
-	//system("clear");
 	database = fopen("database.txt","rb");   
 	Note* note = InitNote();
 	
@@ -16,7 +15,7 @@ int Print(FILE *database){
 	
 	while (!feof(database)){
 		
-		printf("№ %i.\nNote - %sPriority - %i\n\n", i, note->memo, note->priority);
+	    printf("№ %i.\nNote - %sPriority - %i\n\n", i, note->memo, note->priority);
 	    fread(note, sizeof(Note), 1, database);
 	    i++;
 	    
